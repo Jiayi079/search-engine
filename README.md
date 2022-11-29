@@ -31,3 +31,7 @@ According to the study of the search engine and combining with Lucene's characte
 ![image](https://user-images.githubusercontent.com/89435466/204484348-3c498bcf-41b0-4c01-b483-183bd83d6064.png)
 <br><br>
 
+## Basics of Web search engine components
+![image](https://user-images.githubusercontent.com/89435466/204486338-057a2b44-7548-4cd7-a704-92a3e0901148.png)
+
+
