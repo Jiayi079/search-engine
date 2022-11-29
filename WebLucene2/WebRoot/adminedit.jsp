@@ -11,7 +11,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>添加或修改数据</title>
+<title>Adding/Editing Data</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -30,15 +30,15 @@
 				.click(
 						function() {
 							if ($("#txttitle").val() == "") {
-								alert("请输入标题");
+								alert("Please enter a title");
 								return;
 							}
 							if ($("#txtcontent").val() == "") {
-								alert("请输入简介");
+								alert("Please enter description");
 								return;
 							}
 							if ($("#txtlink").val() == "") {
-								alert("请输入链接");
+								alert("Please enter a link");
 								return;
 							}
 
@@ -58,7 +58,7 @@
 												if (data != "") {
 													location.href = "/WebLucene2/servlet/GridServlet?Action=getlist&currentpage=0";
 												} else {
-													alert("保存失败");
+													alert("Save Failed");
 												}
 											});
 						});
@@ -101,20 +101,20 @@
 				cellspacing="0px" id="mytable" class="FormTable">
 				<tr>
 					<td></td>
-					<td class="td_right">搜索数据</td>
+					<td class="td_right">Searching Data</td>
 				</tr>
 				<tr>
-					<td>标题：</td>
+					<td>Title: </td>
 					<td class="td_right"><input style='width:300px;' id="txttitle"
 						type="text" class="txt" value=""></td>
 				</tr>
 				<tr>
-					<td>简介：</td>
+					<td>Discription: </td>
 					<td class="td_right"><textarea rows="5" cols="60"
 							id="txtcontent"></textarea></td>
 				<tr>
 
-					<td>链接</td>
+					<td>Link: </td>
 					<td class="td_right"><input style='width:300px;' id="txtlink"
 						type="text" class="txt" value=""></td>
 				</tr>

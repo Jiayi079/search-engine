@@ -5,7 +5,7 @@
 			String path = request.getContextPath();
 		%>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<title>文件搜索</title>
+		<title>Searching File</title>
 
 		<style type="text/css">
 .highlight {
@@ -60,7 +60,7 @@ function searchfile(URL) {
 
 	if (html.replace(/(^\s*)|(\s*$)/g, "").length > 0) {
 		$("#div2").append(
-				"<p class='folder'>路径：C:\\luceneFile\\" + URL + "</p>");
+				"<p class='folder'>path:C:\\luceneFile\\" + URL + "</p>");
 		len += 1;
 	}
 
@@ -82,7 +82,7 @@ function getFile() {
 					searchfile(u[i]);
 				}
 			}
-			$("#div3").html("找到记录数：" + len);
+			$("#div3").html("find " + len + " of results");
 		}
 	})
 }
@@ -99,7 +99,7 @@ function getFile() {
 			</div>
 			<div class="search_button right">
 				<input type="button" onClick="getFile()"
-					class="input_button large_size" value="搜索" />
+					class="input_button large_size" value="search" />
 
 			</div>
 
@@ -109,7 +109,7 @@ function getFile() {
 		
 		<div style="float: left;margin-top: 22px;margin-left: 10px;">
 			<input type="button" onClick="javascript:location.href='MyJsp.jsp'"
-				class="btnClass_100px_A" value="返回" />
+				class="btnClass_100px_A" value="back" />
 		</div>
 		<div class="clearfix">
 		</div>

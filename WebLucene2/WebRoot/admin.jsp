@@ -62,21 +62,21 @@ function search100() {
 						cellpadding="0">
 						<tr>
 							<td>
-								标题：
+								Title:
 							</td>
 							<td>
 								<input type="text" class="textbox" id="txtkeyword" />
 							</td>
 							<td>
-								<input type="button" class="btnClass_100px_A" value="搜索"
+								<input type="button" class="btnClass_100px_A" value="search"
 									onclick="javascript:search100();" />
 							</td>
 							<td>
-								<input type="button" class="btnClass_100px_A" value="添加"
+								<input type="button" class="btnClass_100px_A" value="add"
 									onclick="javascript:location='<%=request.getContextPath()%>/adminedit.jsp';" />
 							</td>
 							<td>
-								<input type="button" class="btnClass_100px_A" value="返回"
+								<input type="button" class="btnClass_100px_A" value="back"
 									onclick="javascript:location.href='<%=request.getContextPath()%>/index.jsp';" />
 							</td>
 						</tr>
@@ -86,19 +86,19 @@ function search100() {
 
 						<tr>
 							<th>
-								标题
+								Title
 							</th>
 							<th >
-								简介
+								Description
 							</th>
 							<th>
-								链接
+								Link
 							</th>
 							<th>
-								修改
+								Edit
 							</th>
 							<th class="right">
-								删除
+								Delete
 							</th>
 						</tr>
 						<c:forEach var="data" items="${datalist}">
@@ -128,14 +128,14 @@ function search100() {
 						</c:forEach>
 					</table>
 					<div style="margin-top: 5px;">
-						<a href="servlet/GridServlet?Action=getlist&currentpage=${1}">首页</a>
+						<a href="servlet/GridServlet?Action=getlist&currentpage=${1}">Main Page</a>
 						<a
-							href="servlet/GridServlet?Action=getlist&currentpage=${currentpage-1}">上一页</a>
+							href="servlet/GridServlet?Action=getlist&currentpage=${currentpage-1}">Previous Page</a>
 						<a
-							href="servlet/GridServlet?Action=getlist&currentpage=${currentpage+1}">下一页</a>
+							href="servlet/GridServlet?Action=getlist&currentpage=${currentpage+1}">Next Page</a>
 						<a
-							href="servlet/GridServlet?Action=getlist&currentpage=${pagecount}">尾页</a>
-						当前页是第${currentpage}/${pagecount}页,共有${total}条记录
+							href="servlet/GridServlet?Action=getlist&currentpage=${pagecount}">Last Page</a>
+						Current Page: ${currentpage}/${pagecount}, total ${total} search results
 					</div>
 				</div>
 			</div>

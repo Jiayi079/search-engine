@@ -5,7 +5,7 @@
 			String path = request.getContextPath();
 		%>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<title>数据搜索</title>
+		<title>Data search</title>
 
 		<style type="text/css">
 .highlight {
@@ -89,7 +89,7 @@ function searchfile(URL) {
 	//alert(html);
 
 	if (html.replace(/(^\s*)|(\s*$)/g, "").length > 0) {
-		$("#div2").append("路径：C:\\luceneFile\\" + URL);
+		$("#div2").append("path:C:\\luceneFile\\" + URL);
 		$("#div2").append('<br />');
 		len += 1;
 	}
@@ -111,7 +111,7 @@ function showTime() {
 
 function search100(index) {
 	if (document.getElementById("checkText").value == "") {
-		alert("请输入关键字！");
+		alert("Please enter a keyword!");
 		return;
 	}
 	var d1 = showTime();
@@ -168,7 +168,7 @@ function search100(index) {
 								.substring(d2.lastIndexOf(':') + 1))
 								- parseInt(d1
 										.substring(d1.lastIndexOf(':') + 1));
-						$("#div2").html("搜索到:" + ln + " 条记录,用时:" + sjc + " 毫秒");
+						$("#div2").html("Total: " + ln + " record, total takes" + sjc + " ms");
 
 						getSearchHis();
 
@@ -184,7 +184,7 @@ function getSearchHis() {
 					s += "<span>" + json[i].KeyWord + "</span>";
 				}
 				$("#div_his").html(s);
-				//处理搜索历史关键字
+				//deal with search history's keyword
 
 		});
 }
@@ -198,7 +198,7 @@ function getSearchHis() {
 	</head>
 
 	<body style="padding: 20px;">
-<a href='login.jsp' style='margin:20px'>登录</a>
+<a href='login.jsp' style='margin:20px'>Sign In</a>
 <style>
   .ss{
     font-weight: bold;
@@ -206,7 +206,7 @@ function getSearchHis() {
     text-shadow: 0 0 1px currentColor,-1px -1px 1px #000,0 -1px 1px #000,1px -1px 1px #000,1px 0 1px #000,1px 1px 1px #000,0 1px 1px #000,-1px 1px 1px #000,-1px 0 1px #000;
   }
 </style>
-<h1 class="ss" style="width:600px;text-align: center;font-size:20px;">欢迎您的搜索</h1>
+<h1 class="ss" style="width:600px;text-align: center;font-size:20px;">Welcome WebLucene!</h1>
 
 		<div class="search_box head_search">
 		    
@@ -216,7 +216,7 @@ function getSearchHis() {
 			</div>
 			<div class="search_button right">
 				<input type="button" onClick="search100(0)"
-					class="input_button large_size" value="搜索" />
+					class="input_button large_size" value="search" />
 			</div>
             
 			<div class="clearfix">
@@ -229,7 +229,7 @@ function getSearchHis() {
 		<fieldset
 			style="margin-left: 50px;margin-top:20px; border: 1px solid #CCC; width: 550px; padding: 4px;">
 			<legend>
-				搜索历史
+				Searching History
 			</legend>
 			<div id="div_his" class="history"></div>
 		</fieldset>

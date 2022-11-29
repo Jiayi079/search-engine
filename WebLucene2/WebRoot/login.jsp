@@ -11,7 +11,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>登录</title>
+<title>Sign In</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -30,11 +30,11 @@
 				.click(
 						function() {
 							if ($("#txtLoginID").val() == "") {
-								alert("请输入登录名");
+								alert("Please enter your username");
 								return;
 							}
 							if ($("#txtPassWord").val() == "") {
-								alert("请输入密码");
+								alert("Please enter your password");
 								return;
 							}
 
@@ -53,7 +53,7 @@
 												if (data!="") {
 													location.href = "/WebLucene2/servlet/GridServlet?Action=getlist&currentpage=0";
 												} else {
-													alert("登录失败");
+													alert("Failed to login");
 												}
 											});
 						});
@@ -71,15 +71,15 @@
 				<table width="400px" style="border:1px solid #999;padding-left:20px;margin: 10% auto; " cellspacing="0px" id="mytable" class="FormTable">
 					<tr>
 						<td></td>
-						<td class="td_right">用户登录</td>
+						<td class="td_right">User Information</td>
 					</tr>
 					<tr>
-						<td>登录名：</td>
+						<td>Username: </td>
 						<td class="td_right"><input id="txtLoginID" type="text"
 							class="txt" value=""></td>
 					</tr>
 					<tr>
-						<td>密 码：</td>
+						<td>Password: </td>
 						<td class="td_right"><input id="txtPassWord" type="password"
 							class="txt" value=""></td>
 					<tr>

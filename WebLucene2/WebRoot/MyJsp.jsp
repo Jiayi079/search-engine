@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>基于Lucene的搜索引擎的研究与实现</title>
+    <title>Design and Implementation base on Lucene's search engine</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,8 +22,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
   <center>
   <div>
- <input type="button" onClick="javascript:location.href='index.jsp'" class="btnClass_100px_A" value="文件搜索" />
-  &nbsp;&nbsp;<input type="button" onClick="javascript:location.href='index2.jsp'"  class="btnClass_100px_A" value="数据搜索" />
+ <input type="button" onClick="javascript:location.href='index.jsp'" class="btnClass_100px_A" value="search_file" />
+  &nbsp;&nbsp;<input type="button" onClick="javascript:location.href='index2.jsp'"  class="btnClass_100px_A" value="search_data" />
   </div>
   </center>
   </body>
